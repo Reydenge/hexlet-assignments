@@ -8,9 +8,9 @@ import java.util.List;
 class App {
     public static boolean scrabble (String characters, String word) {
         String[] char1 = characters.toLowerCase().split("");
-        ArrayList<String> charList = new ArrayList<>(Arrays.asList(char1));
+        List<String> charList = new ArrayList<>(Arrays.asList(char1));
         String[] word1 = word.toLowerCase().split("");
-        ArrayList<String> wordList = new ArrayList<>(Arrays.asList(word1));
+        List<String> wordList = new ArrayList<>(Arrays.asList(word1));
         for (String s : wordList) {
             if (!charList.contains(s)) {
                 return false;
