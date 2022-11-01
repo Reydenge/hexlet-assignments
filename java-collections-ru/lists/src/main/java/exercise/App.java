@@ -6,7 +6,7 @@ import java.util.List;
 
 // BEGIN
 class App {
-    public static List scrabble (String characters, String word) {
+    public static boolean scrabble (String characters, String word) {
         List<Character> charList = new ArrayList<>();
         List<Character> wordList = new ArrayList<>();
         String char1 = characters.toLowerCase();
@@ -21,14 +21,10 @@ class App {
 
         for (char s : wordList) {
             if (charList.contains(s)) {
-                charList.remove(s);
+                count++;
             }
         }
-        return charList;
-        }
-
-        public static void main (String[] args) {
-            System.out.println(App.scrabble("thlxertwq", "hexlet"));
+        return count == word.length();
         }
     }
 
