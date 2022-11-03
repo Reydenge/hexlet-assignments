@@ -30,8 +30,8 @@ class App {
         for (Map.Entry<String, Integer> pair : wordsMap.entrySet()) {
             result = result.append("  " + pair.getKey() + ": " + pair.getValue() + "\n");
             }
-        String result2 = String.valueOf(result.append("}"));
-        return result2;
+        result.append("}");
+        return result.toString();
         }
 
 
