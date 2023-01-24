@@ -1,10 +1,7 @@
 package exercise;
 
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
-import java.util.stream.Collectors;
-
 // BEGIN
 public class PairedTag extends Tag {
     private String tagBody;
@@ -16,6 +13,7 @@ public class PairedTag extends Tag {
         this.children = children;
     }
 
+    @Override
     public String toString() {
         StringBuilder result = new StringBuilder(super.toString());
         for (var child : children) {
