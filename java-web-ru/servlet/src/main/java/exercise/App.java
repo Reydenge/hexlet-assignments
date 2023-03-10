@@ -29,7 +29,6 @@ public class App {
         app.addServlet(ctx, "WelcomeServlet" , new WelcomeServlet());
         ctx.addServletMappingDecoded("/", "WelcomeServlet");
         // END
-
         return app;
     }
 
