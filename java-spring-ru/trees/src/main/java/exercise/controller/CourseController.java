@@ -20,7 +20,7 @@ public class CourseController {
     private CourseRepository courseRepository;
 
     @GetMapping(path = "")
-    public Iterable<Course> getCorses() {
+    public Iterable<Course> getCourses() {
         return courseRepository.findAll();
     }
 
