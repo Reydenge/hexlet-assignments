@@ -25,7 +25,7 @@ public interface UserRepository extends
         // Дополнительная задача
 
         // BEGIN
-        bindings.bind(user.firstName, user.lastName, user.mail, user.profession)
+        bindings.bind(user.firstName, user.lastName, user.email, user.profession)
                 .first(StringExpression::containsIgnoreCase);
         bindings.bind(user.gender).first(SimpleExpression::eq);
     }
