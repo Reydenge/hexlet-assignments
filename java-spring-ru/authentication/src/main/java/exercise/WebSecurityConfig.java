@@ -10,6 +10,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 
+import static org.springframework.http.HttpMethod.POST;
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -25,7 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // BEGIN
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/users").permitAll()
+                .antMatchers(POST, "/users").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic();
         // END
