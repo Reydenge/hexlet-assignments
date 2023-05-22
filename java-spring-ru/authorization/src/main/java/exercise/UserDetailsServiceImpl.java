@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
         // BEGIN
-        User user = repository.findUserByEmail(email).orElseThrow(() -> new UserNotFoundException("User not found"));
+        User user = repository.findByEmail(email).orElseThrow(() -> new UserNotFoundException("User not found"));
         UserRole userRole = user.getRole();
 
         List<SimpleGrantedAuthority> authority = List.of(new SimpleGrantedAuthority(userRole.toString()));
