@@ -22,7 +22,7 @@ class App {
             try {
                 write(path, (fileFuture1 + fileFuture2).getBytes(), StandardOpenOption.CREATE);
             } catch (IOException error) {
-                System.out.println("No such file exists");
+                System.out.println("NoSuchFileException");
             }
             return "Success";
         });
@@ -37,7 +37,7 @@ class App {
             try {
                 content = readString(path);
             } catch (IOException error) {
-                System.out.println("No such file exists");
+                System.out.println("NoSuchFileException");
             }
             return content;
         });
